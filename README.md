@@ -6,7 +6,7 @@ Official MATLAB implementation of the paper:
 @inproceedings{kececi2026xfode,
   title     = {xFODE: An Explainable Fuzzy Additive ODE Framework for System Identification},
   author    = {Ke{\c{c}}eci, Ertu{\u{g}}rul and Kumbasar, Tufan},
-  booktitle = {Proceedings of the IEEE Conference on Artificial Intelligence (CAI)},
+  booktitle = {2026 IEEE Conference on Artificial Intelligence (CAI)},
   year      = {2026}
 }
 
