@@ -19,6 +19,7 @@ Recent advances in Deep Learning (DL) have strengthened data-driven System Ident
 
 - MATLAB R2023b 
 - Deep Learning Toolbox
+- System Identification Toolbox
 
 ---
 
@@ -26,7 +27,7 @@ Recent advances in Deep Learning (DL) have strengthened data-driven System Ident
 
 ```
 xfode/
-├── xFODE/              # Proposed method (AFODE + xFODE-PS1/PS2/PS3)
+├── xFODE/              # Proposed method (xFODE-PS1/PS2/PS3 and AFODE)
 │   ├── run.m           # Entry point — configure dataset, PS, and SR here
 │   └── lib/            # Core library functions
 ├── FODE/               # FODE baseline
@@ -36,7 +37,7 @@ xfode/
 │   ├── run.m
 │   └── lib/
 └── datasets/
-    └── EVBattery/      # EV Battery dataset (shipped with the repo)
+    └── EVBattery/      # EV Battery dataset 
 ```
 
 ---
@@ -46,9 +47,9 @@ xfode/
 1. Open MATLAB and navigate to the model folder (e.g., `xFODE/`).
 2. Open `run.m` and set your configuration:
    ```matlab
-   dataset_name          = "TwoTank";     % TwoTank | HairDryer | MRDamper | EVBattery | SteamEng
+   dataset_name          = "MRDamper";     % TwoTank | HairDryer | MRDamper | EVBattery | SteamEng
    SR_method             = "incremental"; % "lagged" (SR1) | "incremental" (SR2)
-   input_membership_type = "trimf";       % "gaussmf" (AFODE) | "trimf" (PS1) | "gauss2mf" (PS2/PS3)
+   input_membership_type = "trimf";       % "gaussmf" (AFODE) | "trimf" (PS1) | "gauss2mf" (PS2) | "c-gauss2mf" (PS3)
    number_of_runs        = 20;
    ```
 3. Run `run.m`. Results (mean ± std of RMSE over `number_of_runs` seeds) are printed to the console.
@@ -72,7 +73,7 @@ The Hair Dryer, MR Damper, Two-Tank, and Steam Engine datasets ship with MATLAB'
 ## State Representations
 
 - **SR1 (lagged):** `x_k = [y_k, y_{k-1}, ..., y_{k-m}]`
-- **SR2 (incremental):** `x_k = [y_k, Δy_k, ..., Δᵐy_k]`  *(recommended)*
+- **SR2 (incremental):** `x_k = [y_k, Δy_k, ..., Δᵐy_k]`  
 
 ---
 
