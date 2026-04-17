@@ -2,9 +2,17 @@
 
 Official MATLAB implementation of the paper:
 
-> **xFODE: An Explainable Fuzzy Additive ODE Framework for System Identification**
-> Ertuğrul Keçeci, Tufan Kumbasar
-> IEEE Conference on Artificial Intelligence (CAI), 2026
+```bibtex
+@inproceedings{kececi2025xfode,
+  title     = {{xFODE}: An Explainable Fuzzy Additive {ODE} Framework for System Identification},
+  author    = {Ke{\c{c}}eci, Ertu{\u{g}}rul and Kumbasar, Tufan},
+  booktitle = {Proceedings of the IEEE Conference on Artificial Intelligence (CAI)},
+  year      = {2026}
+}
+
+```
+
+Please cite the paper if you use any functions and publish papers about work performed using these codes.
 
 ---
 
@@ -76,11 +84,5 @@ The Hair Dryer, MR Damper, Two-Tank, and Steam Engine datasets ship with MATLAB'
 
 ---
 
-## Citation
 
-If you use this code, please cite:
 
-```bibtex
-E. Keçeci, T. Kumbasar, 2026. xFODE: An Explainable Fuzzy Additive ODE Framework for System Identification
-
-```
